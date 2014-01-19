@@ -1,0 +1,4 @@
+Insert the BOSM logo information section here.
+It has links to digital goodies such as logo redrawings and wallpapers etc.
+Please follow a pattern and keep it formal and readable.
+Leaving a blank line at the starting of the file might help in alignment.

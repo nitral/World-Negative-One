@@ -1,0 +1,1 @@
+echo "[$(date)]  User $1 logged out of hub's SSH Server." >> "../log/UserAccess.log"

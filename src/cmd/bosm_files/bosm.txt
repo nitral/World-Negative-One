@@ -1,0 +1,12 @@
+Insert BOSM main command text here.
+This displays a little of everything.
+- Command INFO
+- ASCII art
+- Latest Gallery Addition
+- Today's fixtures
+- Today's results
+- Today's BITS Results
+- etc.
+Make it presentable.
+Please follow a pattern and keep it formal and readable.
+Leaving a blank line at the starting of the file might help in alignment.

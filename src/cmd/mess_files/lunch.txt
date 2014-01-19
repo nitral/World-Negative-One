@@ -1,0 +1,7 @@
+Lunch Menu Data File.
+Format:-
+1. Each Line contains a single Food Item.
+2. File can contain blank lines.
+3. Completely Blank Lines are ignored.
+4. Lines can contain starting and trailing whitespaces.
+5. Lines can contain quotes. Quotes are shown as it is.

@@ -1,0 +1,5 @@
+This contains the help section for the Archive-BOT
+It contains the instruction on how to use the Archive-Bot and how are things archived.
+Also, you may include a list of commands and/or archived sections and how to access them.
+Leaving a line in the starting of the file might help in alignment.
+Keep it formal and short.

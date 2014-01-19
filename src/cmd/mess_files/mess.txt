@@ -1,0 +1,5 @@
+Mess Menu Display File.
+Contains the text to be displayed if user issues a +mess command.
+Should contain link to the Original XLS Database File.
+May contain ASCII art.
+Leaving a line blank at top might help in alignment.

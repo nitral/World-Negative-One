@@ -1,0 +1,70 @@
+html { 
+  background: url(images/mario_world.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  
+}
+#wrapper
+{
+width:100%;
+height:auto;
+}
+#banner
+{
+	
+	width: 100%;
+	height:auto;
+	
+}
+.left_content
+{
+	clear:both;
+    width:60%;
+	height:auto;
+	float:left;
+	color:red;
+	font-size:20px;
+	font-weight:900;
+	}
+	
+	#right_content
+	{
+	width:40%;
+	height:auto;
+	float:left;
+	text-align:right;
+	font-size:20px;
+	font-weight:900;
+	}
+	#footer
+	{
+	clear:both;
+	position:absolute;
+	bottom:0;
+	width:50%;
+	height:10%;
+	text-align:center;
+	margin-left:25%;
+	font-weight:900;
+	font-size:20px;
+	
+	
+	}
+	#lightbox
+	{
+	clear:both;
+	width:40%;
+	height:auto;
+	float:left;
+	text-align:left;
+	}
+	#light
+	p{
+	font-weight:600;
+	font-family:comicsans;
+	}
+	
+	

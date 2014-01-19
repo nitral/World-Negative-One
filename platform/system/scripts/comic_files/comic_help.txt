@@ -1,0 +1,14 @@
+
+$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$  COMIC - SECTION  $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+
+   _____                         
+  l___   \                               C O M I C -- K A G E   HELP - DESK                  
+       )   l
+      /  /        Comic Section Commands
+     l__l     +comic - Displays the Comic Section. Contains Original Comics by Students, latest Manga links and news from the comic world.
+      __     +comic artists - Displays the list of artists contributing to this section.     
+     (__)    +comic about - Displays information about the section, original comics etc.
+               +comic help - Displays this section.
+	
+	                                              If you want to contribute to this section, PM SuperMario.
+$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$

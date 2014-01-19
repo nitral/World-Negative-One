@@ -1,0 +1,16 @@
+This file contains the archive sections.
+Each line including the first holds a section name that is archived.
+For eg:
+bosm
+oasis
+This will indicate 2 sections that are archived and Archive-BOT will look for them.
+Note:
+1. Do not leave any blank line.
+2. Names must be what you want users to enter to access archive. For eg: +bosm will correspond to BOSM archive. For that a line bosm should be there in this file.
+3. Names are case sensitive.
+4. Order does not matter.
+
+Example file:-
+bosm
+oasis
+apogee

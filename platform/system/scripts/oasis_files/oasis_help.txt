@@ -1,0 +1,12 @@
+
+*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*# -- OASIS - 2013 -- *#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+						COMMANDS
+                             +oasis          - Gives general information about OASIS'13 and attractions of the fest for the day.
+                             +oasis fixtures - Displays the schedule of each event organised in OASIS'13.
+                             +oasis gallery  - Provides link for the images of OASIS'13 shot by PHOTOGRAPHY CLUB and other freelancers.
+                             +oasis help     - Displays information about the different commands available under this section.
+                             +oasis logo     - Displays the OASIS'13 Logo and digital goodies.
+	            +oasis results     - Displays the results and finalists of various events of OASIS'13
+							 	
+
+*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*# - MASTER YOUR ELEMENT - *#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#						 

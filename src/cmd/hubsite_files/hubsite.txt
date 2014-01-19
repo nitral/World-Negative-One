@@ -1,0 +1,5 @@
+This section contains information related to the hubsite.
+It must contain a working URL of the site.
+This section may have information regarding new updates and upcoming updates.
+Leaving a blank line at top may help in alignment.
+Keep it tidy and clean.

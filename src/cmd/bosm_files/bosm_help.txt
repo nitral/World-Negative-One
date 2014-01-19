@@ -1,0 +1,6 @@
+Insert the BOSM help section here.
+This displays information regarding the various commands available.
+Also, it displays a little information about BOSM.
+Make it presentable.
+Please follow a pattern and keep it formal and readable.
+Leaving a blank line at the starting of the file might help in alignment.

@@ -1,0 +1,4 @@
+Insert the BOSM Gallery section here.
+This contains the latest and older visual media related to the fest.
+Please follow a pattern and keep it formal and readable.
+Leaving a blank line at the starting of the file might help in alignment.

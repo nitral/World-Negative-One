@@ -1,0 +1,3 @@
+Insert the ASCII Art of the BOSM LOGO here.
+Adjust size so that it fits default configuration screen.
+Keep it a little less to be on safe side.

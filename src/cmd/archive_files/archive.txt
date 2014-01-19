@@ -1,0 +1,5 @@
+This file contains the general archive.
+You may put introduction to different sections that are archived and commands to access them.
+You may also put a few magnet links of the different archives if possible.
+Leaving a blank line at starting might help in alignment.
+Keep it formal and short.

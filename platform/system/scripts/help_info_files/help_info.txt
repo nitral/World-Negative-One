@@ -1,0 +1,15 @@
+
++hublist        >> Displays the  list of working hubs.
++notices       >> Displays notices and events.
++cs              >> Displays CS servers currently running on BITS LAN
++cod            >> Displays COD4 MW1 servers currently running on BITS LAN
++dota           >> Displays dota servers currently running on BITS LAN
++oasis          >> Displays files and information related to oasis-our cultural fest
++bosm          >> Displays files and information related to bosm-our sports fest
++comic         >> Displays comics and ascii art.
++mess          >> Displays link to Excel file of Mess Menu of current month.
++history        >> Displays main chat history.
++radioaktiv   >> Displays announcements and campus-buzz by radioaktiv club members
++uploads      >> Displays latest uploads. 
++hubsite        >> Displays a little information about hub website and its address.
++series       >> Displays information

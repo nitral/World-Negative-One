@@ -1,0 +1,5 @@
+Insert the BOSM Fixtures section here.
+All Fixtures of the fest BOSM are put here.
+Make it READABLE.
+Please follow a pattern and keep it formal and readable.
+Leaving a blank line at the starting of the file might help in alignment.

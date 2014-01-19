@@ -1,0 +1,11 @@
+
+-------------------------------DC HUBS Currently Working on BITS LAN-------------------------------
+DeZire				:    dchub://172.16.13.39    :         SIDS
+The Heavenly Abode of Football	:    dchub://172.16.13.117	:        JuanMata™
+AvaKai				:    dchub://172.17.2.127	:        h3R0D0TuS
+Gotham central			:    dchub://172.16.10.99	:        Vestor
+Hell				:    dchub://172.16.6.86	:        Mephistopheles
+World Negative One                   :    dchub://172.16.20.183   :        SuperMario
+BITSians_ka_aDda                     :    dchub://172.16.17.80    :        BlueEagle 
+=====================================================================
+

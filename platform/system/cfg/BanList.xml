@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="windows-1252" standalone="yes" ?>
+<BanList version="2">
+    <Bans>
+        <Ban>
+            <Type>0</Type>
+            <IP>172.16.9.48</IP>
+            <Nick>Bhediya</Nick>
+            <Reason>Stop Sharing &quot;Bitsian B******&quot; files</Reason>
+            <By>Bowser</By>
+            <NickBan>1</NickBan>
+            <IpBan>1</IpBan>
+            <FullIpBan>0</FullIpBan>
+            <Expire>0</Expire>
+        </Ban>
+        <Ban>
+            <Type>0</Type>
+            <IP>172.16.9.125</IP>
+            <Nick>jojoz</Nick>
+            <Reason>Stop Sharing &quot;Bitsian B*******&quot; Files</Reason>
+            <By>Bowser</By>
+            <NickBan>1</NickBan>
+            <IpBan>1</IpBan>
+            <FullIpBan>0</FullIpBan>
+            <Expire>0</Expire>
+        </Ban>
+    </Bans>
+    <RangeBans />
+</BanList>

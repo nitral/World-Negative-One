@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="windows-1252" standalone="yes" ?>
+<PtokaX Version="0.5.0.0">
+    <Booleans>
+        <Bool Name="AutoStart">1</Bool>
+        <Bool Name="RedirectWhenHubFull">0</Bool>
+        <Bool Name="AutoRegister">0</Bool>
+        <Bool Name="ShareLimitRedir">0</Bool>
+        <Bool Name="TempBanRedir">0</Bool>
+        <Bool Name="PermBanRedir">0</Bool>
+        <Bool Name="CheckNewReleases">0</Bool>
+        <Bool Name="StartMinimized">1</Bool>
+        <Bool Name="DisableMOTD">1</Bool>
+        <Bool Name="ReportSuspiciousTag">0</Bool>
+        <Bool Name="LogScriptErrors">1</Bool>
+    </Booleans>
+    <Integers>
+        <Integer Name="MaxUsers">1000</Integer>
+        <Integer Name="MinShareLimit">5</Integer>
+        <Integer Name="MinShareUnits">3</Integer>
+        <Integer Name="DefaultTempBanTime">1</Integer>
+        <Integer Name="SameMainChatMessages">60</Integer>
+        <Integer Name="DefloodTempBanTime">1</Integer>
+        <Integer Name="MaxSimultaneousLogins">69</Integer>
+        <Integer Name="MaxUsersPeak">423</Integer>
+    </Integers>
+    <Strings>
+        <String Name="HubName">World Negative One</String>
+        <String Name="AdminNick">Bowser</String>
+        <String Name="HubAddress">0.0.0.0</String>
+        <String Name="TCPPorts">411;1209</String>
+        <String Name="HubTopic">Gaming &amp; Art</String>
+        <String Name="ShareLimitMessage">Your share is outside the limits. Minimum share is %[min]. Please increase your share.</String>
+        <String Name="BotNick">[W-1]</String>
+        <String Name="BotDescription">Hub - Security</String>
+        <String Name="OpChatNick">[MarioBros.]</String>
+        <String Name="MessageToAddToBanMessage">You have been temporarily banned for 1 minute.</String>
+    </Strings>
+</PtokaX>

@@ -1,0 +1,4 @@
+Insert the Notices to be shown to user upon Request here.
+Leaving a blank line at the starting of the file might help in alignment.
+Notices should ideally have a public deadline.
+They should be updated regularly.
