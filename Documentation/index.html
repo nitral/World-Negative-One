@@ -1,0 +1,255 @@
+<!-- Documentation Home Page -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>World Negative One Documentation - Home</title>
+
+		<!-- Embedded CSS Properties -->
+		<style>
+			a
+			{
+				text-decoration: none;
+			}
+
+			a:hover
+			{
+				text-decoration: underline;
+			}
+
+			div#top-notification-bar
+			{
+				position: absolute;
+				left: 0px;
+				width: 100%;
+				border-bottom: 1px solid rgb(102, 102, 102);
+				display: none;
+			}
+
+			section#header-logo
+			{
+				float: left;
+				margin-left: 5px;
+				
+			}
+
+			section#header-links
+			{
+				float: left;
+				padding-right: 25px;
+				border-right: 1px solid black;
+				margin-left: 10px;
+				line-height: parent;
+			}
+
+			section.header-links
+			{
+				padding: 5px;
+				margin-left: 15px;
+				float: left;
+			}
+
+			section.header-links a
+			{
+				color: #000000;
+			}
+
+			div#header-links-info
+			{
+				float:right;
+				color: rgb(90, 90, 90);
+			}
+
+			section#link-description-1
+			{
+				display: none;
+			}
+
+			section#link-description-2
+			{
+				display: none;
+			}
+
+			section#link-description-3
+			{
+				display: none;
+			}
+
+			section#link-description-4
+			{
+				display: none;
+			}
+
+			section#link-description-5
+			{
+				display: none;
+			}
+
+			div#home-content
+			{
+				margin-top: 15px;
+			}
+
+			section#home-content-logo
+			{
+				margin-top: 12%;
+			}
+
+			section.home-content-links
+			{
+				padding: 5px;
+			}
+
+			section.home-content-links a
+			{
+				color: #000000;
+			}
+
+			div#about-content
+			{
+				margin-top: 15px;
+				display: none;
+			}
+
+			div#team-content
+			{
+				margin-top: 15px;
+				display: none;
+			}
+
+			footer
+			{
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				border-top: 1px solid rgb(228, 228, 228);
+				color: rgb(102, 102, 102);
+				background: rgb(242, 242, 242);
+				width: 100%;
+				display: inline;
+				align: center;
+			}
+
+			section.footer-links
+			{
+				margin-left: 75px;
+				padding: 10px;
+				display: inline-block;
+			}
+
+			section.footer-links a
+			{
+				color: rgb(102, 102, 102);
+			}
+
+			section#footer-link-1
+			{
+				margin-left: 0px;
+			}
+
+			div.clear-div
+			{
+				clear: both;
+			}
+		</style>
+
+		<!-- JavaScript Functions -->
+		<script>
+			function initializeAll() {
+				// Initialize JavaScript Code Here.
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<!-- Hidden Notification Div for popping notifications -->
+		<div class = "notification-bar" id = "top-notification-bar">
+		</div>
+
+		<!-- Header Div for External Links and their Information/Description -->
+		<header>
+			<section id = "header-logo">
+				<img src = "./images/header-logo.png" id = "header-logo">
+			</section>
+			<!-- External Third Party Links -->
+			<section id = "header-links">
+				<section class = "header-links"><a href = "http://www.example.com" id = "header-link-1">Link - 1</a></section>
+				<section class = "header-links"><a href = "http://www.example.com" id = "header-link-2">Link - 2</a></section>
+				<section class = "header-links"><a href = "http://www.example.com" id = "header-link-3">Link - 3</a></section>
+				<section class = "header-links"><a href = "http://www.example.com" id = "header-link-4">Link - 4</a></section>
+				<section class = "header-links"><a href = "http://www.example.com" id = "header-link-5">Link - 5</a></section>
+			</section>
+			<!-- Header Third-Party Links Description/Information -->
+			<div id = "header-links-info">
+				<section id = "link-description-0">
+					World Negative One - Gaming and Art | Open Source Direct Connect Hub Suite.
+				</section>
+				<section id = "link-description-1">
+					Header Link Description - 1.
+				</section>
+				<section id = "link-description-2">
+					Header Link Description - 2.
+				</section>
+				<section id = "link-description-3">
+					Header Link Description - 3.
+				</section>
+				<section id = "link-description-4">
+					Header Link Description - 4.
+				</section>
+				<section id = "link-description-5">
+					Header Link Description - 5.
+				</section>
+			</div>
+		</header>
+
+		<!-- Clear Division -->
+		<div class = "clear-div"></div>
+
+		<!-- Main Content Body Division -->
+		<div class = "content-holder" id = "main-content-body">
+			<!-- Home Page Content Division -->
+			<div class = "content" id = "home-content">
+				<center>
+					<section id = "home-content-logo"><img src = "./images/logo.png"></section>
+				<br />
+				<br />
+				<section class = "home-content-links"><a href = "http://www.example.com" id = "home-content-link-1">Link - 1</a></section>
+				<section class = "home-content-links"><a href = "http://www.example.com" id = "home-content-link-2">Link - 2</a></section>
+				<section class = "home-content-links"><a href = "http://www.example.com" id = "home-content-link-3">Link - 3</a></section>
+				</center>
+			</div>
+			<!-- About Page Content Division -->
+			<div class = "content" id = "about-content">
+				<center>
+					<section id = "about-content-logo"><img src = "./images/logo.png"></section>
+				<br />
+				<br />
+				<section class = "about-content-links"><a href = "http://www.example.com" id = "about-content-link-1">Link - 1</a></section>
+				<section class = "about-content-links"><a href = "http://www.example.com" id = "about-content-link-2">Link - 2</a></section>
+				<section class = "about-content-links"><a href = "http://www.example.com" id = "about-content-link-3">Link - 3</a></section>
+				</center>
+			</div>
+			<!-- Team/Mailing List Content Division -->
+			<div class = "content" id = "team-content">
+				<center>
+					<section id = "team-content-logo"><img src = "./images/logo.png"></section>
+				<br />
+				<br />
+				<section class = "team-content-links"><a href = "http://www.example.com" id = "team-content-link-1">Link - 1</a></section>
+				<section class = "team-content-links"><a href = "http://www.example.com" id = "team-content-link-2">Link - 2</a></section>
+				<section class = "team-content-links"><a href = "http://www.example.com" id = "team-content-link-3">Link - 3</a></section>
+				</center>
+			</div>
+		</div>
+
+		<!-- Footer Division for internal page navigation links -->
+		<footer id = "footer">
+			<center>
+				<section class = "footer-links" id = "footer-link-1"><a href = "http://www.example.com" id = "footer-link-1">Link - 1</a></section>
+				<section class = "footer-links"><a href = "http://www.example.com" id = "footer-link-1">Link - 2</a></section>
+				<section class = "footer-links"><a href = "http://www.example.com" id = "footer-link-1">Link - 3</a></section>
+			</center>
+		</footer>
+	</body>
+</html>
