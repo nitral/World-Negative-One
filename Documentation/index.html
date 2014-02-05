@@ -20,17 +20,33 @@
 			div#top-notification-bar
 			{
 				position: absolute;
+				top: 0px;
 				left: 0px;
 				width: 100%;
 				border-bottom: 1px solid rgb(102, 102, 102);
 				display: none;
+				background-color: #FFF0B4;
+			}
+			
+			section#top-notification-bar-message
+			{
+				float: left;
+				padding: 7px;
+				margin-left: 5px;
+			}
+			
+			section#top-notification-bar-close
+			{
+				float: right;
+				margin-right: 5px;
+				padding: 7px;
+				color: #CC0000;
 			}
 
 			section#header-logo
 			{
 				float: left;
 				margin-left: 5px;
-				
 			}
 
 			section#header-links
@@ -44,14 +60,14 @@
 
 			section.header-links
 			{
-				padding: 5px;
 				margin-left: 15px;
 				float: left;
 			}
 
-			section.header-links a
+			a.header-links
 			{
 				color: #000000;
+				padding: 10px;
 			}
 
 			div#header-links-info
@@ -111,7 +127,7 @@
 				display: none;
 			}
 
-			div#team-content
+			div#credits-content
 			{
 				margin-top: 15px;
 				display: none;
@@ -137,6 +153,11 @@
 				display: inline-block;
 			}
 
+			a.footer-links
+			{
+				padding: 10px;
+			}
+			
 			section.footer-links a
 			{
 				color: rgb(102, 102, 102);
@@ -155,16 +176,52 @@
 
 		<!-- JavaScript Functions -->
 		<script>
+			var currentActiveContent, currentActiveHeaderLinkDescription, defaultHeaderLinkDescription;
+			
 			function initializeAll() {
-				// Initialize JavaScript Code Here.
+				currentActiveContent = document.getElementById("home-content");
+				currentActiveHeaderLinkDescription = document.getElementById("link-description-0");
+				defaultHeaderLinkDescription = document.getElementById("link-description-0");
 			}
+			
+			function changeActiveHeaderLinkDescription(newActiveHeaderLinkDescriptionID) {
+				var newActiveHeaderLinkDescription = document.getElementById("link-description-" + newActiveHeaderLinkDescriptionID);
+				currentActiveHeaderLinkDescription.style.display = "none";
+				newActiveHeaderLinkDescription.style.display = "block";
+				currentActiveHeaderLinkDescription = newActiveHeaderLinkDescription;
+			}
+			
+			function resetActiveHeaderLinkDescription() {
+				currentActiveHeaderLinkDescription.style.display = "none";
+				currentActiveHeaderLinkDescription = defaultHeaderLinkDescription;
+				currentActiveHeaderLinkDescription.style.display = "block";
+			}
+			
+			function changeActiveContent(newActiveContentID) {
+				var newActiveContent = document.getElementById(newActiveContentID + "-content");
+				currentActiveContent.style.display = "none";
+				newActiveContent.style.display = "block";
+				currentActiveContent = newActiveContent;
+			}
+			
+			function closeNotification() {
+				document.getElementById("top-notification-bar").style.display = "none";
+			}
+
 		</script>
 
 	</head>
 
-	<body>
+	<body onLoad = "initializeAll()">
+
 		<!-- Hidden Notification Div for popping notifications -->
 		<div class = "notification-bar" id = "top-notification-bar">
+			<!-- Error Message/Notification Message -->
+			<section id = "top-notification-bar-message">
+				<strong>Message / Notification</strong>
+			</section>
+			<!-- Notification Bar Close Button -->
+			<section id = "top-notification-bar-close"><button onClick = "closeNotification()">X</button></section>
 		</div>
 
 		<!-- Header Div for External Links and their Information/Description -->
@@ -174,31 +231,31 @@
 			</section>
 			<!-- External Third Party Links -->
 			<section id = "header-links">
-				<section class = "header-links"><a href = "http://www.example.com" id = "header-link-1">Link - 1</a></section>
-				<section class = "header-links"><a href = "http://www.example.com" id = "header-link-2">Link - 2</a></section>
-				<section class = "header-links"><a href = "http://www.example.com" id = "header-link-3">Link - 3</a></section>
-				<section class = "header-links"><a href = "http://www.example.com" id = "header-link-4">Link - 4</a></section>
-				<section class = "header-links"><a href = "http://www.example.com" id = "header-link-5">Link - 5</a></section>
+				<section class = "header-links"><a href = "http://http://www.ptokax.org/" id = "header-link-1" class = "header-links" onMouseOver = "changeActiveHeaderLinkDescription(1)" onMouseOut = "resetActiveHeaderLinkDescription()">PtokaX</a></section>
+				<section class = "header-links"><a href = "http://www.lua.org/" id = "header-link-5" class = "header-links" onMouseOver = "changeActiveHeaderLinkDescription(2)" onMouseOut = "resetActiveHeaderLinkDescription()">Lua</a></section>
+				<section class = "header-links"><a href = "http://git-scm.com/" id = "header-link-2" class = "header-links" onMouseOver = "changeActiveHeaderLinkDescription(3)" onMouseOut = "resetActiveHeaderLinkDescription()">Git</a></section>
+				<section class = "header-links"><a href = "https://www.java.com/en/" id = "header-link-3" class = "header-links" onMouseOver = "changeActiveHeaderLinkDescription(4)" onMouseOut = "resetActiveHeaderLinkDescription()">Java</a></section>
+				<section class = "header-links"><a href = "http://www.bitvise.com/" id = "header-link-4" class = "header-links" onMouseOver = "changeActiveHeaderLinkDescription(5)" onMouseOut = "resetActiveHeaderLinkDescription()">Bitvise SSH Server</a></section>
 			</section>
 			<!-- Header Third-Party Links Description/Information -->
 			<div id = "header-links-info">
 				<section id = "link-description-0">
-					World Negative One - Gaming and Art | Open Source Direct Connect Hub Suite.
+					World Negative One - Gaming and Art | Open Source Direct Connect Hub Suite
 				</section>
 				<section id = "link-description-1">
-					Header Link Description - 1.
+					Multi-platform server for Neo-Modus Direct Connect Peer-To-Peer sharing network
 				</section>
 				<section id = "link-description-2">
-					Header Link Description - 2.
+					A powerful, fast, lightweight, embeddable scripting language
 				</section>
 				<section id = "link-description-3">
-					Header Link Description - 3.
+					Free and open source distributed version control system
 				</section>
 				<section id = "link-description-4">
-					Header Link Description - 4.
+					An object-oriented programming language and computing platform
 				</section>
 				<section id = "link-description-5">
-					Header Link Description - 5.
+					SSH Server designed for all Windows NT-series operating systems
 				</section>
 			</div>
 		</header>
@@ -212,33 +269,31 @@
 			<div class = "content" id = "home-content">
 				<center>
 					<section id = "home-content-logo"><img src = "./images/logo.png"></section>
-				<br />
-				<br />
-				<section class = "home-content-links"><a href = "http://www.example.com" id = "home-content-link-1">Link - 1</a></section>
-				<section class = "home-content-links"><a href = "http://www.example.com" id = "home-content-link-2">Link - 2</a></section>
-				<section class = "home-content-links"><a href = "http://www.example.com" id = "home-content-link-3">Link - 3</a></section>
+					<br />
+					<br />
+					<section class = "home-content-links"><a href = "./doc_index.html" id = "home-content-link-1">Documentation Index</a></section>
+					<section class = "home-content-links"><a href = "https://github.com/nitral/world-negative-one" id = "home-content-link-2">Github Repository</a></section>
+					<section class = "home-content-links"><a href = "https://groups.google.com/forum/#!forum/worldnegativeone" id = "home-content-link-3">Google Groups</a></section>
 				</center>
 			</div>
 			<!-- About Page Content Division -->
 			<div class = "content" id = "about-content">
 				<center>
-					<section id = "about-content-logo"><img src = "./images/logo.png"></section>
-				<br />
-				<br />
-				<section class = "about-content-links"><a href = "http://www.example.com" id = "about-content-link-1">Link - 1</a></section>
-				<section class = "about-content-links"><a href = "http://www.example.com" id = "about-content-link-2">Link - 2</a></section>
-				<section class = "about-content-links"><a href = "http://www.example.com" id = "about-content-link-3">Link - 3</a></section>
+					<h1>About:-</h1>
+					<h4>
+						World Negative One is a DC Hub suite built, currently, using the PtokaX DC Hub as the primary serving platform. It is a file-sharing network hosting platform having scripts that make the experience (both as a host and a client) more fun and easy. <br />
+						The project as of now is in its infant stages of development and dreams of becoming a full-fledged file sharing social network in the future.<br />
+						Extensive documentation of the project is contained in the "Documentation" directory.<br />
+						Our areas of interest: Web Development, Search Algorithms, Machine Learning, Network Programming etc.<br />
+						If you wish to help in developing this hub further with us, send a request at our mailing list: <a href = "https://groups.google.com/forum/#!forum/worldnegativeone">Google Groups Page</a>
+					</h4>
 				</center>
 			</div>
-			<!-- Team/Mailing List Content Division -->
-			<div class = "content" id = "team-content">
+			<!-- Credits/Mailing List Content Division -->
+			<div class = "content" id = "credits-content">
 				<center>
-					<section id = "team-content-logo"><img src = "./images/logo.png"></section>
-				<br />
-				<br />
-				<section class = "team-content-links"><a href = "http://www.example.com" id = "team-content-link-1">Link - 1</a></section>
-				<section class = "team-content-links"><a href = "http://www.example.com" id = "team-content-link-2">Link - 2</a></section>
-				<section class = "team-content-links"><a href = "http://www.example.com" id = "team-content-link-3">Link - 3</a></section>
+					<h1>Credits:-</h1>
+					<h3>This is at least a partial credits-file of people that have contributed to the World Negative One Project.</h3>
 				</center>
 			</div>
 		</div>
@@ -246,9 +301,9 @@
 		<!-- Footer Division for internal page navigation links -->
 		<footer id = "footer">
 			<center>
-				<section class = "footer-links" id = "footer-link-1"><a href = "http://www.example.com" id = "footer-link-1">Link - 1</a></section>
-				<section class = "footer-links"><a href = "http://www.example.com" id = "footer-link-1">Link - 2</a></section>
-				<section class = "footer-links"><a href = "http://www.example.com" id = "footer-link-1">Link - 3</a></section>
+				<section class = "footer-links" id = "footer-link-1"><a href = "javascript: changeActiveContent('home')" id = "footer-link-1" class = "footer-links">Home</a></section>
+				<section class = "footer-links"><a href = "javascript: changeActiveContent('about')" id = "footer-link-2" class = "footer-links">About</a></section>
+				<section class = "footer-links"><a href = "javascript: changeActiveContent('credits')" id = "footer-link-3" class = "footer-links">Credits</a></section>
 			</center>
 		</footer>
 	</body>
