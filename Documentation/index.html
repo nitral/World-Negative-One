@@ -114,8 +114,14 @@
 			section.home-content-links
 			{
 				padding: 5px;
+				display: inline-block;
 			}
-
+			
+			section#home-content-link-3
+			{
+				margin-left: 120px;
+			}
+			
 			section.home-content-links a
 			{
 				color: #000000;
@@ -268,32 +274,36 @@
 			<!-- Home Page Content Division -->
 			<div class = "content" id = "home-content">
 				<center>
-					<section id = "home-content-logo"><img src = "./images/logo.png"></section>
+					<section id = "home-content-logo"><img src = "./images/logo.png" title = "World Negative One" alt = "World Negative One"></section>
 					<br />
 					<br />
-					<section class = "home-content-links"><a href = "./doc_index.html" id = "home-content-link-1">Documentation Index</a></section>
-					<section class = "home-content-links"><a href = "https://github.com/nitral/world-negative-one" id = "home-content-link-2">Github Repository</a></section>
-					<section class = "home-content-links"><a href = "https://groups.google.com/forum/#!forum/worldnegativeone" id = "home-content-link-3">Google Groups</a></section>
+					<section>
+						<section class = "home-content-links"><a href = "./doc_index.html" id = "home-content-link-1"><img src = "./images/doc-index.png" title = "Documentation Index"><br />Documentation Index</a></section>
+					</section>
+					<section>
+						<section class = "home-content-links"><a href = "https://github.com/nitral/world-negative-one" id = "home-content-link-2"><img src = "./images/github.png" title = "Github Repository"><br />Github Repository</a></section>
+						<section class = "home-content-links" id = "home-content-link-3"><a href = "https://groups.google.com/forum/#!forum/worldnegativeone" id = "home-content-link-3"><img src = "./images/google-groups.png" title = "Google Group"><br />Google Group</a></section>
+					</section>
 				</center>
 			</div>
 			<!-- About Page Content Division -->
 			<div class = "content" id = "about-content">
 				<center>
 					<h1>About:-</h1>
-					<h4>
+					<p>
 						World Negative One is a DC Hub suite built, currently, using the PtokaX DC Hub as the primary serving platform. It is a file-sharing network hosting platform having scripts that make the experience (both as a host and a client) more fun and easy. <br />
 						The project as of now is in its infant stages of development and dreams of becoming a full-fledged file sharing social network in the future.<br />
 						Extensive documentation of the project is contained in the "Documentation" directory.<br />
 						Our areas of interest: Web Development, Search Algorithms, Machine Learning, Network Programming etc.<br />
 						If you wish to help in developing this hub further with us, send a request at our mailing list: <a href = "https://groups.google.com/forum/#!forum/worldnegativeone">Google Groups Page</a>
-					</h4>
+					</p>
 				</center>
 			</div>
 			<!-- Credits/Mailing List Content Division -->
 			<div class = "content" id = "credits-content">
 				<center>
 					<h1>Credits:-</h1>
-					<h3>This is at least a partial credits-file of people that have contributed to the World Negative One Project.</h3>
+					<h4>This is at least a partial credits-file of people that have contributed to the World Negative One Project.</h4>
 				</center>
 			</div>
 		</div>
