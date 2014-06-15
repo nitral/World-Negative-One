@@ -1,0 +1,44 @@
+File System
+===========
+Nilay Binjola <nilaybinjola@gmail.com>
+15 June 2014
+:Author Initials: NB
+:toc:
+:icons:
+:numbered:
+
+== Introduction
+The directory structure of the hub resembles that of the UNIX operating system. The inspiration for the file system came from the Filesystem Hierarchy Standard (FHS) that is indeed used in UNIX and UNIX-like operating systems, maintained by the Linux Foundation. The filesystem is designed to facilitate a natural organization of modules of the suite. Knowing the function of each directory will help in understanding how information flows between modules.
+
+This modular design instead of one big standalone directory containing everything enables us to restrict permissions on what is viewable and editable to different users who can login through a SSH server. This further enables many people to work together in its maintenance, reducing the workload on individual admins considerably.
+
+== Directory Structure
+As in FHS, all files and directories come under the root directory marked as "/". The following table lists directories and some important subdirectories along with their descriptions.
+[align="center",cols="^1,3",options="header"]
+|===========================
+|Directory		^e|Description
+|/			|Primary hierarchy root and root directory of the entire file system hierarchy.
+|/backup		|Backup archive. Backup is made of the entire hub filesystem excluding those that are not essential to the hub. The filesystem is maintained as it is.
+|/bin			|Essential binaries of hub modules needed for hub commands, backup etc.
+|/system		|Contains the hub serving platform itself, PtokaX. Also contains hub interface scripts and settings.
+|/system/cfg		|Hub configuration files.
+|/system/logs		|Hub log files. Contains both script and system logs.
+|/system/scripting.docs	|Lua 5 API2 Documentation which has been there since PtokaX 0.3.6.0d release.
+|/system/scripts	|Lua scripts with their configuration and resource files.
+|/system/texts		|Text commands. Contains only .txt files.
+|/tmp			|Global Level Temporary files. Files may be deleted/modified/added asynchronously.
+|/usr			|Second hierarchy for user-specific data. Contains user-specific binaries, configuration files, home directories and logs.
+|/usr/bin		|Binaries for maintenance of user data. Eg: home-directory size controller etc.
+|/usr/etc		|User-wide and system-wide users configuration files.
+|/usr/home		|User home directories. Contains saved files and folders.
+|/usr/log		|Log files. Various logs on users, eg: access logs, maintenance logs etc.
+|/usr/tmp		|Temporary files directory for user binaries.
+|/www			|Secondary hierarchy for the website of the hub.
+|===========================
+
+== See also
+* link:repository-structure.html[Repository Structure]
+
+== References
+. https://groups.google.com/forum/#!topic/worldnegativeone/kCKDvi3Hmc8["The Secret Vault"]. World Negative One Mailing List. 12-Jan-2014.
+. http://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard[Filesystem Hierarchy Standard]. Wikipedia.org.

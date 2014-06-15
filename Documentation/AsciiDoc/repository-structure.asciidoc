@@ -1,0 +1,33 @@
+Repository Structure
+====================
+Nilay Binjola <nilaybinjola@gmail.com>
+15 June 2014
+:Author Initials: NB
+:toc:
+:icons:
+:numbered:
+
+== Introduction
+The project was made open-source as of January, 2014 with a Git repository hosted on Github. The repository is public and pull requests are most welcome. The repository, just like the suite itself, has a proper directory structure/file system. This enables us to segregate documentation, release and source code facilitating development and maintenance.
+
+== Directory Structure
+Just like the file system, all files and directories come under the root directory, marked here as "/". The following table lists directories and some important subdirectories along with their descriptions.
+[align="center",cols="^1,3",options="header"]
+|===========================
+|Directory		^e|Description
+|/			|Primary hierarchy root and root directory of the entire file system hierarchy.
+|/Documentation		|Contains extensive documentation of the project. Explains installation, file system, modules, source code documentation etc.
+|/release		|Contains the latest stable production release of the project.
+|/src			|All the suite source code. Except third-party software.
+|/src/cmd		|Hub command/interface scripts. These go to /system/scripts.
+|/src/GameScanners	|Game server scanner programs like SourceEngineQuery, CODServerQuery etc.
+|/src/MessMenuGenerator	|Mess menu generator scripts including database (at the moment).
+|/src/www		|Web development directory.
+|===========================
+
+== See also
+* link:file-system.html[File System]
+
+== References
+. https://groups.google.com/forum/#!topic/worldnegativeone/BronBe_1uQ0["The Git Repository"]. World Negative One Mailing List. 19-Jan-2014.
+. https://groups.google.com/forum/#!topic/worldnegativeone/6kpw9pM7xLw["Repository Release Folder and Summer Development"]. World Negative One Mailing List. 20-May-2014.

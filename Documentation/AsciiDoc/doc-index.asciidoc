@@ -1,0 +1,39 @@
+Documentation Index
+===================
+World Negative One Direct Connect Hub Suite - Gaming & Art
+:toc:
+:icons:
+
+== Introduction
+World Negative One is a user-friendly Direct Connect Hub Suite built on the PtokaX DC Hub platform. the suite builds around the file-sharing capability given by the serving platform to make the overall experience more fun and easy for the user. The suite has a plethora of features for both the host and the user like automated backup, LAN game server scanners, television series information retrieval, SSH logging etc.
+
+This is the index for the documentation of the World Negative One project. The documentation contains information on installation, configuration, modules, source code, contributing etc. Select any of the links from the navigation below to know more.
+
+== Contents
+. link:file-system.html[File System] - Listing and description of the important high-level directories and subdirectories.
+. link:repository-structure.html[Repository Structure] - Explained structure of the Git repository.
+
+== Broke something?
+If you broke something, that's awesome news for us! Quickly send us a bug report on our mailing list and we'll immediately swat it. Our mailing list is https://groups.google.com/forum/#!forum/worldnegativeone[here]. Or, you can open or request to open an issue on the Github repository https://github.com/nitral/world-negative-one[here].
+
+Please give a proper subject to your email. Please also include proper instructions to reproduce the problem and its effect. You are most welcome to enroll yourself in this war against the bugs!
+
+*_Lets scrub some bugs!_*
+
+== Contributing to the Codebase
+.Section not comprehensive
+NOTE: This section is not comprehensive and does not cover the subject completely. Help us create a separate comprehensive article on _"Contributing to the codebase"_ in documentation.
+
+Want to contribute to the codebase? *Awesome!* Any contribution to the project is most welcome. _Every bit counts!_
+
+First things first. You should get in touch with us on our _mailing list_ https://groups.google.com/forum/#!forum/worldnegativeone[here]. There you will always find people willing to help you in any way they can. Then, _fork the main repository_ https://github.com/nitral/world-negative-one[here] (you will need a Github account) and get yourself the latest stable release of the hub suite to play around with. Break something! Or, find a missing feature that you wish to implement.
+
+After you feel at home, discuss your idea on the mailing list. We are always there to help and guide you. In fact you might find a person working on it or a person to work with. Now, that you have everything set, _start hacking!_
+
+Once you feel you have what you wanted, push your changes to your own repository on Github and _send us a pull request_. Your patch will be applied in no time to the main source tree!
+
+*_Happy Hacking!_*
+
+== External Links
+* https://github.com/nitral/world-negative-one[World Negative One - Github Repository]
+* https://groups.google.com/forum/#!forum/worldnegativeone[World Negative One - Mailing List]
