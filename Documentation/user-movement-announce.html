@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta name="generator" content="AsciiDoc 8.6.6" />
-<title>Documentation Index</title>
+<title>User Movement Announcer</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
@@ -735,8 +735,10 @@ asciidoc.install(2);
 </head>
 <body class="article">
 <div id="header">
-<h1>Documentation Index</h1>
-<span id="author">World Negative One Direct Connect Hub Suite - Gaming &amp; Art</span><br />
+<h1>User Movement Announcer</h1>
+<span id="author">Nilay Binjola</span><br />
+<span id="email"><tt>&lt;<a href="mailto:nilaybinjola@gmail.com">nilaybinjola@gmail.com</a>&gt;</tt></span><br />
+<span id="revdate">19 June 2014</span>
 <div id="toc">
   <div id="toctitle">Table of Contents</div>
   <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
@@ -744,83 +746,42 @@ asciidoc.install(2);
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_introduction">Introduction</h2>
+<h2 id="_objective">1. Objective</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>World Negative One is a user-friendly Direct Connect Hub Suite built on the PtokaX DC Hub platform. the suite builds around the file-sharing capability given by the serving platform to make the overall experience more fun and easy for the user. The suite has a plethora of features for both the host and the user like automated backup, LAN game server scanners, television series information retrieval, SSH logging etc.</p></div>
-<div class="paragraph"><p>This is the index for the documentation of the World Negative One project. The documentation contains information on installation, configuration, modules, source code, contributing etc. Select any of the links from the navigation below to know more.</p></div>
+<div class="paragraph"><p>This simple lua script announces publicly when a user enters or exits the hub&#8217;s chat room.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_contents">Contents</h2>
+<h2 id="_installation">2. Installation</h2>
 <div class="sectionbody">
-<div class="olist arabic"><ol class="arabic">
-<li>
-<p>
-<a href="file-system.html">File System</a> - Listing and description of the important high-level directories and subdirectories.
-</p>
-</li>
-<li>
-<p>
-<a href="repository-structure.html">Repository Structure</a> - Explained structure of the Git repository.
-</p>
-</li>
-<li>
-<p>
-<a href="user-movement-announce.html">User Movement Announcer</a> - Public announcement when user enters/exits the chat room.
-</p>
-</li>
-</ol></div>
+<div class="paragraph"><p>This is a PtokaX script made in lua. To install, just copy the .lua source file to <em>/system/scripts</em>. If PtokaX was already running, press "Refresh scripts" and <em>check</em> the script label in the list.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_broke_something">Broke something?</h2>
+<h2 id="_specification">3. Specification</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>If you broke something, that&#8217;s awesome news for us! Quickly send us a bug report on our mailing list and we&#8217;ll immediately swat it. Our mailing list is <a href="https://groups.google.com/forum/#!forum/worldnegativeone">here</a>. Or, you can open or request to open an issue on the Github repository <a href="https://github.com/nitral/world-negative-one">here</a>.</p></div>
-<div class="paragraph"><p>Please give a proper subject to your email. Please also include proper instructions to reproduce the problem and its effect. You are most welcome to enroll yourself in this war against the bugs!</p></div>
-<div class="paragraph"><p><strong><em>Lets scrub some bugs!</em></strong></p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_contributing_to_the_codebase">Contributing to the Codebase</h2>
-<div class="sectionbody">
+<div class="paragraph"><p>The script is completely made using Lua. On connect, the user&#8217;s nickname is taken from the user table given by the PtokaX scripting interface. A string suffix is concatenated. Similarly, a relevant string suffix is added if the user disconnects. The entry/exit message is sent to all users in the hub&#8217;s chat room. The hub&#8217;s bot name is manually entered inside the script.</p></div>
+<div class="exampleblock">
+<div class="title">Example 1. Entry/Exit Message</div>
+<div class="content">
+<div class="paragraph"><p>&lt;[W-1]&gt; Foo has entered the room.</p></div>
+<div class="paragraph"><p>&lt;[W-1]&gt; Bar has left the room.</p></div>
+</div></div>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
-<img src="./images/icons/note.png" alt="Note" />
+<img src="./images/icons/warning.png" alt="Warning" />
 </td>
-<td class="content">
-<div class="title">Section not comprehensive</div>This section is not comprehensive and does not cover the subject completely. Help us create a separate comprehensive article on <em>"Contributing to the codebase"</em> in documentation.</td>
+<td class="content">Users cannot <em>opt out</em> of entry/exit messages as of version 1.0.</td>
 </tr></table>
 </div>
-<div class="paragraph"><p>Want to contribute to the codebase? <strong>Awesome!</strong> Any contribution to the project is most welcome. <em>Every bit counts!</em></p></div>
-<div class="paragraph"><p>First things first. You should get in touch with us on our <em>mailing list</em> <a href="https://groups.google.com/forum/#!forum/worldnegativeone">here</a>. There you will always find people willing to help you in any way they can. Then, <em>fork the main repository</em> <a href="https://github.com/nitral/world-negative-one">here</a> (you will need a Github account) and get yourself the latest stable release of the hub suite to play around with. Break something! Or, find a missing feature that you wish to implement.</p></div>
-<div class="paragraph"><p>After you feel at home, discuss your idea on the mailing list. We are always there to help and guide you. In fact you might find a person working on it or a person to work with. Now, that you have everything set, <em>start hacking!</em></p></div>
-<div class="paragraph"><p>Once you feel you have what you wanted, push your changes to your own repository on Github and <em>send us a pull request</em>. Your patch will be applied in no time to the main source tree!</p></div>
-<div class="paragraph"><p><strong><em>Happy Hacking!</em></strong></p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_external_links">External Links</h2>
-<div class="sectionbody">
-<div class="ulist"><ul>
-<li>
-<p>
-<a href="https://github.com/nitral/world-negative-one">World Negative One - Github Repository</a>
-</p>
-</li>
-<li>
-<p>
-<a href="https://groups.google.com/forum/#!forum/worldnegativeone">World Negative One - Mailing List</a>
-</p>
-</li>
-</ul></div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-06-19 01:40:36 IST
+Last updated 2014-06-19 01:37:09 IST
 </div>
 </div>
 </body>
