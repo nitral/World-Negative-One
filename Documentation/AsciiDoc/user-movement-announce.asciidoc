@@ -1,0 +1,26 @@
+User Movement Announcer
+=======================
+Nilay Binjola <nilaybinjola@gmail.com>
+19 June 2014
+:Author Initials: NB
+:toc:
+:icons:
+:numbered:
+
+== Objective
+This simple lua script announces publicly when a user enters or exits the hub's chat room.
+
+== Installation
+This is a PtokaX script made in lua. To install, just copy the .lua source file to '/system/scripts'. If PtokaX was already running, press "Refresh scripts" and _check_ the script label in the list.
+
+== Specification
+The script is completely made using Lua. On connect, the user's nickname is taken from the user table given by the PtokaX scripting interface. A string suffix is concatenated. Similarly, a relevant string suffix is added if the user disconnects. The entry/exit message is sent to all users in the hub's chat room. The hub's bot name is manually entered inside the script.
+
+.Entry/Exit Message
+=================================
+<[W-1]> Foo has entered the room.
+
+<[W-1]> Bar has left the room.
+=================================
+
+WARNING: Users cannot _opt out_ of entry/exit messages as of version 1.0.

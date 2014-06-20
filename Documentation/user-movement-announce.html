@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta name="generator" content="AsciiDoc 8.6.9" />
-<title>File System</title>
+<title>User Movement Announcer</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
@@ -733,10 +733,10 @@ asciidoc.install(2);
 </head>
 <body class="article">
 <div id="header">
-<h1>File System</h1>
+<h1>User Movement Announcer</h1>
 <span id="author">Nilay Binjola</span><br />
 <span id="email"><code>&lt;<a href="mailto:nilaybinjola@gmail.com">nilaybinjola@gmail.com</a>&gt;</code></span><br />
-<span id="revdate">15 June 2014</span>
+<span id="revdate">19 June 2014</span>
 <div id="toc">
   <div id="toctitle">Table of Contents</div>
   <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
@@ -744,138 +744,42 @@ asciidoc.install(2);
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_introduction">1. Introduction</h2>
+<h2 id="_objective">1. Objective</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>The directory structure of the hub resembles that of the UNIX operating system. The inspiration for the file system came from the Filesystem Hierarchy Standard (FHS) that is indeed used in UNIX and UNIX-like operating systems, maintained by the Linux Foundation. The filesystem is designed to facilitate a natural organization of modules of the suite. Knowing the function of each directory will help in understanding how information flows between modules.</p></div>
-<div class="paragraph"><p>This modular design instead of one big standalone directory containing everything enables us to restrict permissions on what is viewable and editable to different users who can login through a SSH server. This further enables many people to work together in its maintenance, reducing the workload on individual admins considerably.</p></div>
+<div class="paragraph"><p>This simple lua script announces publicly when a user enters or exits the hub&#8217;s chat room.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_directory_structure">2. Directory Structure</h2>
+<h2 id="_installation">2. Installation</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>As in FHS, all files and directories come under the root directory marked as "/". The following table lists directories and some important subdirectories along with their descriptions.</p></div>
-<div class="tableblock">
-<table rules="all"
-style="margin-left:auto; margin-right:auto;"
-width="100%"
-frame="border"
-cellspacing="0" cellpadding="4">
-<col width="25%" />
-<col width="75%" />
-<thead>
-<tr>
-<th align="center" valign="top">Directory              </th>
-<th align="center" valign="top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center" valign="top"><p class="table">/</p></td>
-<td align="left" valign="top"><p class="table">Primary hierarchy root and root directory of the entire file system hierarchy.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/backup</p></td>
-<td align="left" valign="top"><p class="table">Backup archive. Backup is made of the entire hub filesystem excluding those that are not essential to the hub. The filesystem is maintained as it is.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/bin</p></td>
-<td align="left" valign="top"><p class="table">Essential binaries of hub modules needed for hub commands, backup etc.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/system</p></td>
-<td align="left" valign="top"><p class="table">Contains the hub serving platform itself, PtokaX. Also contains hub interface scripts and settings.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/system/cfg</p></td>
-<td align="left" valign="top"><p class="table">Hub configuration files.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/system/logs</p></td>
-<td align="left" valign="top"><p class="table">Hub log files. Contains both script and system logs.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/system/scripting.docs</p></td>
-<td align="left" valign="top"><p class="table">Lua 5 API2 Documentation which has been there since PtokaX 0.3.6.0d release.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/system/scripts</p></td>
-<td align="left" valign="top"><p class="table">Lua scripts with their configuration and resource files.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/system/texts</p></td>
-<td align="left" valign="top"><p class="table">Text commands. Contains only .txt files.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/tmp</p></td>
-<td align="left" valign="top"><p class="table">Global Level Temporary files. Files may be deleted/modified/added asynchronously.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/usr</p></td>
-<td align="left" valign="top"><p class="table">Second hierarchy for user-specific data. Contains user-specific binaries, configuration files, home directories and logs.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/usr/bin</p></td>
-<td align="left" valign="top"><p class="table">Binaries for maintenance of user data. Eg: home-directory size controller etc.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/usr/etc</p></td>
-<td align="left" valign="top"><p class="table">User-wide and system-wide users configuration files.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/usr/home</p></td>
-<td align="left" valign="top"><p class="table">User home directories. Contains saved files and folders.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/usr/log</p></td>
-<td align="left" valign="top"><p class="table">Log files. Various logs on users, eg: access logs, maintenance logs etc.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/usr/tmp</p></td>
-<td align="left" valign="top"><p class="table">Temporary files directory for user binaries.</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><p class="table">/www</p></td>
-<td align="left" valign="top"><p class="table">Secondary hierarchy for the website of the hub.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="paragraph"><p>This is a PtokaX script made in lua. To install, just copy the .lua source file to <em>/system/scripts</em>. If PtokaX was already running, press "Refresh scripts" and <em>check</em> the script label in the list.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_see_also">3. See also</h2>
+<h2 id="_specification">3. Specification</h2>
 <div class="sectionbody">
-<div class="ulist"><ul>
-<li>
-<p>
-<a href="repository-structure.html">Repository Structure</a>
-</p>
-</li>
-</ul></div>
+<div class="paragraph"><p>The script is completely made using Lua. On connect, the user&#8217;s nickname is taken from the user table given by the PtokaX scripting interface. A string suffix is concatenated. Similarly, a relevant string suffix is added if the user disconnects. The entry/exit message is sent to all users in the hub&#8217;s chat room. The hub&#8217;s bot name is manually entered inside the script.</p></div>
+<div class="exampleblock">
+<div class="title">Example 1. Entry/Exit Message</div>
+<div class="content">
+<div class="paragraph"><p>&lt;[W-1]&gt; Foo has entered the room.</p></div>
+<div class="paragraph"><p>&lt;[W-1]&gt; Bar has left the room.</p></div>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">Users cannot <em>opt out</em> of entry/exit messages as of version 1.0.</td>
+</tr></table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_references">4. References</h2>
-<div class="sectionbody">
-<div class="olist arabic"><ol class="arabic">
-<li>
-<p>
-<a href="https://groups.google.com/forum/#!topic/worldnegativeone/kCKDvi3Hmc8">"The Secret Vault"</a>. World Negative One Mailing List. 12-Jan-2014.
-</p>
-</li>
-<li>
-<p>
-<a href="http://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">Filesystem Hierarchy Standard</a>. Wikipedia.org.
-</p>
-</li>
-</ol></div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-06-16 18:59:39 IST
+Last updated 2014-06-20 22:40:30 IST
 </div>
 </div>
 </body>

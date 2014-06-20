@@ -1,0 +1,66 @@
+# Auto detect text files and perform LF normalization.
+*	text=auto
+
+# Files to be marked as text and normalized (Convert CRLF => LF)
+
+*.gitattributes	text
+*.gitignore	text
+*.asciidoc	text
+*.c	text
+*.cpp	text
+*.py	text
+*.df	text
+*.java	text
+*.json	text
+*.jsp	text
+*.jspf	text
+*.sh	text
+*.sql	text
+*.tld	text
+*.lua	text
+*.txt	text
+*.php 	text
+*.css 	text
+*.js 	text
+*.htm 	text
+*.html 	text
+*.xml 	text
+*.ini 	text
+*.inc 	text
+.doc 	diff=astextplain
+*.DOC 	diff=astextplain
+*.docx 	diff=astextplain
+*.DOCX 	diff=astextplain
+*.dot 	diff=astextplain
+*.DOT 	diff=astextplain
+*.pdf 	diff=astextplain
+*.PDF 	diff=astextplain
+*.rtf 	diff=astextplain
+*.RTF 	diff=astextplain
+
+# Files to be marked as binary and left as is.
+
+*.class	binary
+*.dll 	binary
+*.ear 	binary
+*.jar 	binary
+*.so 	binary
+*.war 	binary
+*.mov 	binary
+*.mp4 	binary
+*.mp3 	binary
+*.flv 	binary
+*.fla 	binary
+*.swf 	binary
+*.gz 	binary
+*.zip 	binary
+*.7z 	binary
+*.ttf 	binary
+
+# Graphics
+*.png	binary
+*.jpg	binary
+*.jpeg	binary
+*.gif	binary
+*.ico	binary
+*.svg	text
