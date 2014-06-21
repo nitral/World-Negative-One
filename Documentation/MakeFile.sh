@@ -8,7 +8,7 @@ if cd $inputDir
   else
     echo "[$(date)]::ERROR:'Unable to change directory to Asciidoc'\n"
 fi
-if ls *.txt|sed 's/\.txt//g' > $outputDir/$tempListOfFiles
+if ls *.asciidoc|sed 's/\.asciidoc//g' > $outputDir/$tempListOfFiles
   then
     echo "[$(date)]::File $tempListOfFiles created successfully\n"
   else
@@ -22,7 +22,7 @@ if cd $outputDir
 fi
 for i in `cat $tempListOfFiles`
 do
-   if asciidoc -o ./$i.html -b html $inputDir/$i.txt
+   if asciidoc -o ./$i.html -b html $inputDir/$i.asciidoc
    then
      echo "[$(date)]::$i.html created successfully\n"
    else
