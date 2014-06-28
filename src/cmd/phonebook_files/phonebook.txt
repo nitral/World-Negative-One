@@ -1,0 +1,5 @@
+Insert phonebook contacts here to be shown to user upon request.
+Leaving a blank line at the starting of the file might help in alignment.
+Phonebook contacts should be clearly legible and updated regularly.
+Emergence contacts should be added on top with a demarker line separating them from others.
+Contacts should be categorized and sorted alphabetically inside the category.

@@ -1,0 +1,37 @@
+Phonebook (Telephone Directory)
+===============================
+Nilay Binjola <nilaybinjola@gmail.com>
+28 June 2014
+:Author Initials: NB
+:toc:
+:icons:
+:numbered:
+
+== Objective
+Hub script to display a static list of emergency, important and frequently needed contacts by the hub users on request.
+
+== Installation
+This is a PtokaX script made in Lua. To install, just copy the .lua source file to '/system/scripts'. If PtokaX was already running, press "Refresh scripts" and _check_ the script label in the list.
+
+== Usage
+The command can be invoked by issuing the following command in hub's main chat: ++phone+. This is followed by the listing by the hub bot.
+
+Any addition, edition or removal request should be sent to the system administrator or hub maintainer.
+
+== Specification
+The script is completely made using Lua. On request (issuing the proper command) on hub's main chat, the user is displayed a listing of contacts. The listing is provided from a file maintained by the hub maintainer and administrator. The phonebook listing is only sent to the user who requested it. The list is static. The hub's bot name is manually entered inside the script.
+
+== Customization
+The listing is provided by the file: '/system/scripts/phonebook_files/phonebook.txt'. The contents are displayed as they are. Leaving a blank line at the starting of the file might help in alignment. Some optional customization guidelines are:
+
+. Leaving a blank line at the starting of file may help in alignment. 
+. Listing should be clearly legible and updated regularly.
+. Emergency contacts should be added on top and demarcated from rest of contacts using a separator horizontal rule.
+. Contacts should be categorized and sorted alphabetically within respective categories.
+. A footer message may optionally be included to tell users whom to contact for adding, removing or modifying the contacts listing.
+
+The hub bot name can be changed by modifying the +HUB_BOT_NAME+ global variable in the .lua source file. 
+
+== References
+. https://groups.google.com/forum/#!topic/worldnegativeone/6RUEl7ysD9A["Hub Script Added: Phonebook"]. World Negative One Mailing List. 28-Jun-2014.
+. https://groups.google.com/forum/#!topic/worldnegativeone/AGEs12bfDx4["Script requests"]. World Negative One Mailing List. 29-May-2014.

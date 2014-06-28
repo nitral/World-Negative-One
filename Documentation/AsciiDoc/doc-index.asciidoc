@@ -13,6 +13,7 @@ This is the index for the documentation of the World Negative One project. The d
 . link:file-system.html[File System] - Listing and description of the important high-level directories and subdirectories.
 . link:repository-structure.html[Repository Structure] - Explained structure of the Git repository.
 . link:user-movement-announce.html[User Movement Announcer] - Public announcement when user enters/exits the chat room.
+. link:phonebook.html[Phonebook (Telephone Directory)] - Hub script to list emergency, important and frequently needed contacts.
 
 == Broke something?
 If you broke something, that's awesome news for us! Quickly send us a bug report on our mailing list and we'll immediately swat it. Our mailing list is https://groups.google.com/forum/#!forum/worldnegativeone[here]. Or, you can open or request to open an issue on the Github repository https://github.com/nitral/world-negative-one[here].
