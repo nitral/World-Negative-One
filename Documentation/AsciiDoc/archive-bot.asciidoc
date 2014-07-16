@@ -1,0 +1,62 @@
+Archive - BOT
+=============
+Nilay Binjola <nilaybinjola@gmail.com>
+16 July 2014
+:Author Initials: NB
+:toc:
+:icons:
+:numbered:
+
+== Objective
+Hub script that serves as a means to archive sections whose relevance or use has temporarily expired.
+
+== Installation
+This is a PtokaX script made in Lua. To install, just copy the .lua source file to '/system/scripts'. If PtokaX was already running, press "Refresh scripts" and _check_ the script label in the list. The script uses 3 files in the subdirectory '/system/scripts/archive_files' for resources. These are 'archive.txt', 'archive_help.txt' and 'archive_sections.txt'.
+
+== Usage
+The Archive-BOT can be invoked by issuing the following command in hub's main chat:
+
+* ++archive+ - Displays a list of archived sections and details regarding each.
+* ++archive help+ - Displays a help section related to the Archive-BOT.
+* ++<Section Name>+ - Displays the archived section. Same as +archive <Section Name>+ whose use is deprecated.
+
+== Specification
+The script is completely made using Lua. Depending on the command issued, the user is displayed relevant content. The content is provided by resource files in the subdirectory '/system/scripts/archive_files'. The archive section content is only sent to the user who requested it. The content is static and can only be changed by the hub maintainer/system administrator. The Archive-BOT's name is manually entered inside the script. Details of the contents of the resource files in the command subdirectory are given in the table below.
+[align="center",cols="^1,3",options="header"]
+|===========================
+|Resource File		^e|Description
+|archive.txt		|General archive section. Contains introduction to different archived sections along with commands to access them and magnet links to their main arhived files.
+|archive_help.txt	|Help section for the Archive-BOT. Contains instruction on how to use the Archive-Bot and how are things archived. May contain commands to access archived sections.
+|archive_sections.txt	|Contains the command names to access archived sections. Used to save the list of available archived sections. _(See Customization for details)_
+|_Section Name_.txt	|Contains content of the archived section. This content is displayed as it is when ++<Section Name>+ command is issued.
+|===========================
+
+== Operation Process
+The script on startup creates paths to its resource files and registers the Archive-BOT in the hub. Then the archvive sections table is loaded. This is read from the file '/system/scripts/archive_files/archive_sections.txt'. On chat arrival, the command keyword is stripped and checked. Relevant action is then taken. If the Archive-BOT is invoked, the files '/system/scripts/archive_files/archive.txt' or '/system/scripts/archive_files/archive_help.txt' is read and displayed as it is.
+
+If an archived section is invoked, the section name is checked in the table that was previously loaded. If found, the _Section Name_.txt resource file is read. In case it is missing, an error message is displayed to the user. The archived section resource file is displayed as it is if found.
+
+== Customization
+The Lua script has the BOT details which can be altered using the global variables - +BOT_NAME+, +BOT_DESC+ and +BOT_EMAIL+. This BOT is different from the Hub-BOT. Notes for customizing the resource files are given below.
+
+.Customizing 'archive.txt' and 'archive_help.txt'
+The contents are displayed as they are. Leaving a blank line at the starting of the file might help in alignment. Some optional customization guidelines are:
+
+. Leaving a blank line at the starting of file may help in alignment.
+. Magnet links to main archived files should be included.
+. Introduction to the archived sections should be included.
+. Commands to access different archived sections should be included.
+. A footer message may optionally be included to tell users whom to contact for adding, removing or modifying the archived section listing.
+
+.Customizing 'archive_sections.txt'
+This is a configuration file and the format must be strictly adhered to in order to ensure proper functioning of the script. The rules are:
+
+. Each line including the first holds a section name that is archived.
+. Do not leave any blank line.
+. Names must be what you want users to enter to access archive. For eg: ++bosm+ will correspond to BOSM archive. For that a line *bosm* should be there in this file.
+. Names are case sensitive.
+. Order does not matter.
+
+For each section name here, a _Section Name_.txt with same file name should be made in the resources subdirectory. That archived section resource file will be displayed to the user as they are. In case it is missing, an error message will be shown to the user.
+
+Leaving a blank line at the starting of archived section files may help in alignment and aesthetics.

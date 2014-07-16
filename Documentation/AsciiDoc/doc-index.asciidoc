@@ -12,6 +12,7 @@ This is the index for the documentation of the World Negative One project. The d
 == Contents
 . link:file-system.html[File System] - Listing and description of the important high-level directories and subdirectories.
 . link:repository-structure.html[Repository Structure] - Explained structure of the Git repository.
+. link:archive-bot.html[Archive-BOT] - BOT that archives sections whose relevance or use has temporarily expired.
 . link:user-movement-announce.html[User Movement Announcer] - Public announcement when user enters/exits the chat room.
 . link:phonebook.html[Phonebook (Telephone Directory)] - Hub script to list emergency, important and frequently needed contacts.
 
