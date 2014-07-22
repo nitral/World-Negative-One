@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta name="generator" content="AsciiDoc 8.6.9" />
-<title>Documentation Index</title>
+<title>Documentation Guidelines</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
@@ -733,8 +733,10 @@ asciidoc.install(2);
 </head>
 <body class="article">
 <div id="header">
-<h1>Documentation Index</h1>
-<span id="author">World Negative One Direct Connect Hub Suite - Gaming &amp; Art</span><br />
+<h1>Documentation Guidelines</h1>
+<span id="author">Nilay Binjola</span><br />
+<span id="email"><code>&lt;<a href="mailto:nilaybinjola@gmail.com">nilaybinjola@gmail.com</a>&gt;</code></span><br />
+<span id="revdate">22 June 2014</span>
 <div id="toc">
   <div id="toctitle">Table of Contents</div>
   <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
@@ -742,98 +744,248 @@ asciidoc.install(2);
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_introduction">Introduction</h2>
+<h2 id="_introduction">1. Introduction</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>World Negative One is a user-friendly Direct Connect Hub Suite built on the PtokaX DC Hub platform. the suite builds around the file-sharing capability given by the serving platform to make the overall experience more fun and easy for the user. The suite has a plethora of features for both the host and the user like automated backup, LAN game server scanners, television series information retrieval, SSH logging etc.</p></div>
-<div class="paragraph"><p>This is the index for the documentation of the World Negative One project. The documentation contains information on installation, configuration, modules, source code, contributing etc. Select any of the links from the navigation below to know more.</p></div>
+<div class="paragraph"><p>The project was made open-source as of January, 2014 with a Git repository hosted on Github. The project is free for users, hackers, maintainers, administrators etc. to review, use and modify. Hence, the project requires proper formal documentation. This document contains general guidelines to be followed while documenting installation, configuration, modules, features etc.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_contents">Contents</h2>
+<h2 id="_directory_structure">2. Directory Structure</h2>
 <div class="sectionbody">
+<div class="paragraph"><p>Documentation has a complete subheirarchy as shown below. "/" refers to the repository primary heirarchy root. The following table lists directories and some important subdirectories along with their descriptions.</p></div>
+<div class="tableblock">
+<table rules="all"
+style="margin-left:auto; margin-right:auto;"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="25%" />
+<col width="75%" />
+<thead>
+<tr>
+<th align="center" valign="top">Directory              </th>
+<th align="center" valign="top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" valign="top"><p class="table">/Documentation</p></td>
+<td align="left" valign="top"><p class="table">Documentation heirarchy root and root directory of the entire documentation system heirarchy. Contains documentation compilation script and HTML documents with the documentation index HTML page. Also contains the documentation landing page.</p></td>
+</tr>
+<tr>
+<td align="center" valign="top"><p class="table">/Documentation/AsciiDoc</p></td>
+<td align="left" valign="top"><p class="table">Contains documentation AsciiDocs in human-readable plain-text format. They form the source of the documentation.</p></td>
+</tr>
+<tr>
+<td align="center" valign="top"><p class="table">/Documentation/images</p></td>
+<td align="left" valign="top"><p class="table">Contains images for the documentation HTML pages and the documentation index HTML page.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_documentation_structure">3. Documentation Structure</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>All documentation as of 27<sup>th</sup> January 2014 is to be made a part of the <em>/Documentation</em> subheirarchy. Documentation is made using <strong>AsciiDoc</strong> which is a human-readable document format using plain-text mark-up conventions. These <em>.asciidoc</em> files act as source files for document generation. The documentation structure has a documentation compilation script that compiles the AsciiDocs to formatted HTML pages in the documentation root. All images are stored in <em>/Documentation/images</em> and paths in the AsciiDocs must be made accordingly as HTML pages are kept in the documentation root.</p></div>
+<div class="paragraph"><p>Documentation starts from the <em>index.html</em> landing page. This stand-alone page contains external links relevant to the project. Also, the page contains an <em>About</em> section and a <em>Credits</em> section. Credits are sorted name-wise aplhabetically and contain <em>name, email, role in project and snail-mail address</em>. Documentation pages are indexed in the <strong>Documentation Index</strong> which has a brief introduction of the project along with links to all documentation pages.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_a_page">4. Creating a Page</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_search_and_improve_don_8217_t_duplicate">4.1. Search and Improve. Don&#8217;t duplicate.</h3>
+<div class="paragraph"><p>You should first search what you are looking for before diving into writing a page. This will save you time and the documentation maintainer some headache. If you find what you are looking for but find it lacking certain elements, it is recommended that instead of creating a new page you improve it. You can search for the page you are looking for in the <strong>Documentation Index</strong> page.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_create_a_page">4.2. Create a Page</h3>
+<div class="paragraph"><p>Create a page as a AsciiDoc document in the <em>/Documentation/AsciiDoc</em> subdirectory while adhering to the guidelines below. Choose a proper name. Follow modularity rules and keep the style similar to that of a wiki. Align the style to that of existing pages. Provide all applicable sections in the page.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_update_em_doc_index_asciidoc_em">4.3. Update <em>doc-index.asciidoc</em></h3>
+<div class="paragraph"><p>After creating a page, you should update the <em>doc-index.asciidoc</em> document by adding an entry in the <strong>Contents</strong> section along with a working relative link. All links are relative. You should also add a small 1 line description aligning with previously done entries.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_compile_pages">4.4. Compile Pages</h3>
+<div class="paragraph"><p>Now, you must compile the AsciiDocs to HTML format for easy viewing. Use the <em>/Documentation/MakeFile.sh</em> compilation script. It will compile all AsciiDoc pages including yours and <em>doc-index.asciidoc</em> to HTML documents in the documentation root directory.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_documentation_guidelines">5. Documentation Guidelines</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_general_guidelines">5.1. General Guidelines</h3>
+<div class="paragraph"><p>Some general guidelines to be followed on all pages and all sections are:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<strong>Comprehensive</strong> - Describe all the functionality of the product you can. Anything and everything that is relevant.
+</p>
+</li>
+<li>
+<p>
+<strong>Conformant</strong> - Describe actual behavior and observations and not what is expected.
+</p>
+</li>
+<li>
+<p>
+<strong>Clarity</strong> - Be clear. Use short and effective sentences.
+</p>
+</li>
+<li>
+<p>
+<strong>Consistent</strong> - Be consistent with vocabulary and terminologies. Use proper AsciiDoc formatting.
+</p>
+</li>
+<li>
+<p>
+<strong>Modularity</strong> - Divide the documentation page into modules/sections.
+</p>
+</li>
+<li>
+<p>
+<strong>Text Formatting</strong> - Format text wherever needed using appropriate styles like bold, italics, underline etc. in AsciiDocs.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>It is therefore recommended that you understand <strong>AsciiDoc</strong> usage properly before starting off here. It is extremely easy and powerful and is used by extensively by the industry.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_page_guidelines">5.2. Page Guidelines</h3>
+<div class="paragraph"><p>Divide the page into sections and modules that are properly named. This allows for better readability. AsciiDoc will automatically create the table of contents. Some guidelines/rules for creating pages are:</p></div>
+<div class="sect3">
+<h4 id="_page_title">5.2.1. Page Title</h4>
+<div class="paragraph"><p>Page title should use capitalization and spaces between words. It should align to the standard vocabulary and terminology used in the rest of the documentation. Long page titles should be avoided.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_page_metadata">5.2.2. Page Metadata</h4>
+<div class="paragraph"><p>All pages should at least contain the following metadata:</p></div>
 <div class="olist arabic"><ol class="arabic">
 <li>
 <p>
-<a href="file-system.html">File System</a> - Listing and description of the important high-level directories and subdirectories.
+Author&#8217;s complete name
 </p>
 </li>
 <li>
 <p>
-<a href="repository-structure.html">Repository Structure</a> - Explained structure of the Git repository.
+Author&#8217;s active email address
 </p>
 </li>
 <li>
 <p>
-<a href="archive-bot.html">Archive-BOT</a> - BOT that archives sections whose relevance or use has temporarily expired.
+Date of creation of document
 </p>
 </li>
 <li>
 <p>
-<a href="user-movement-announce.html">User Movement Announcer</a> - Public announcement when user enters/exits the chat room.
-</p>
-</li>
-<li>
-<p>
-<a href="phonebook.html">Phonebook (Telephone Directory)</a> - Hub script to list emergency, important and frequently needed contacts.
-</p>
-</li>
-<li>
-<p>
-<a href="documentation-guidelines.html">Documentation Guidelines</a> - Documentation structure and guidelines.
+Author&#8217;s initials
 </p>
 </li>
 </ol></div>
 </div>
+<div class="sect3">
+<h4 id="_table_of_contents">5.2.3. Table of contents</h4>
+<div class="paragraph"><p>For easy referencing and readability, a table of contents must always be included on top. The table of contents should have icons and numbers enabled. It should at least have sections listed with a depth of 2.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_sections">5.2.4. Sections</h4>
+<div class="paragraph"><p>A page should be divided into sections. This will give proper structure to the page and will enable abstractions to be made as the documentation is for users, hackers and maintainers alike. Some sections common to most pages and their guidelines are:</p></div>
+<div class="sect4">
+<h5 id="_introduction_2">Introduction</h5>
+<div class="paragraph"><p>A short and concise section describing the use and objective of the module/script/page. Should be to-the-point. Preferably 1 or 2 sentences.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_installation">Installation</h5>
+<div class="paragraph"><p>A short and concise section that describes the steps needed to install the module/script etc. Should include the dependency tree if required. Installation should start from integrating the module in the project to enabling or launching it. It may also contain files that can be used to customize the module. Links to downloads and installation notes of dependency tree software should be listed in the <strong>External Links</strong> section.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_usage">Usage</h5>
+<div class="paragraph"><p>This section deals with how the end-user will use the module/script etc. Should contain commands to be issued and their purposes. Should also contain the person to be approached in case something goes wrong for the end-user.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_specification">Specification</h5>
+<div class="paragraph"><p>An overview of the working of the module and description of its resource files. It should list the languages used to program the module/script/feature etc. It may also contain a sample output presented if it clarifies the working of the module/script/feature etc. It should contain warnings, important notes, tips etc. relevant to the working of the module/script/feature etc.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_operation_process">Operation Process</h5>
+<div class="paragraph"><p>This section is relevant to modules/scripts/features etc. in which knowledge of the operation process is needed before customization can be done. Should detail the step-by-step process of the inner-working of the module/script/feature precisely. Should explain exception handling and relevant justifications.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_customization">Customization</h5>
+<div class="paragraph"><p>This section is very important as it explains how the module can be customized in order to suit the needs of the maintainer/system administrator. Should explain the use, format and steps-to-customize of all customizable resource files. May contain recommendations and tips.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_see_also">See Also</h5>
+<div class="paragraph"><p>Some documentation pages are related to other documentation pages. This section should contain a list of links to all of them. Explanations are not necessary and generally should be avoided. The list should contain sections that should be read in continuation for better understanding.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_references">References</h5>
+<div class="paragraph"><p>A page may not always be completely comprehensive and may lack the back-story and discussions to sections. This section lists links to places which the user can refer to as well as places that were referred to while making the page. Proper format should be followed. Link should be properly named, followed by the origin of the resource and the creation/reference date of the resource (if applicable).</p></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="sect1">
-<h2 id="_broke_something">Broke something?</h2>
+<h2 id="_references_2">6. References</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>If you broke something, that&#8217;s awesome news for us! Quickly send us a bug report on our mailing list and we&#8217;ll immediately swat it. Our mailing list is <a href="https://groups.google.com/forum/#!forum/worldnegativeone">here</a>. Or, you can open or request to open an issue on the Github repository <a href="https://github.com/nitral/world-negative-one">here</a>.</p></div>
-<div class="paragraph"><p>Please give a proper subject to your email. Please also include proper instructions to reproduce the problem and its effect. You are most welcome to enroll yourself in this war against the bugs!</p></div>
-<div class="paragraph"><p><strong><em>Lets scrub some bugs!</em></strong></p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_contributing_to_the_codebase">Contributing to the Codebase</h2>
-<div class="sectionbody">
-<div class="admonitionblock">
-<table><tr>
-<td class="icon">
-<img src="./images/icons/note.png" alt="Note" />
-</td>
-<td class="content">
-<div class="title">Section not comprehensive</div>This section is not comprehensive and does not cover the subject completely. Help us create a separate comprehensive article on <em>"Contributing to the codebase"</em> in documentation.</td>
-</tr></table>
-</div>
-<div class="paragraph"><p>Want to contribute to the codebase? <strong>Awesome!</strong> Any contribution to the project is most welcome. <em>Every bit counts!</em></p></div>
-<div class="paragraph"><p>First things first. You should get in touch with us on our <em>mailing list</em> <a href="https://groups.google.com/forum/#!forum/worldnegativeone">here</a>. There you will always find people willing to help you in any way they can. Then, <em>fork the main repository</em> <a href="https://github.com/nitral/world-negative-one">here</a> (you will need a Github account) and get yourself the latest stable release of the hub suite to play around with. Break something! Or, find a missing feature that you wish to implement.</p></div>
-<div class="paragraph"><p>After you feel at home, discuss your idea on the mailing list. We are always there to help and guide you. In fact you might find a person working on it or a person to work with. Now, that you have everything set, <em>start hacking!</em></p></div>
-<div class="paragraph"><p>Once you feel you have what you wanted, push your changes to your own repository on Github and <em>send us a pull request</em>. Your patch will be applied in no time to the main source tree!</p></div>
-<div class="paragraph"><p><strong><em>Happy Hacking!</em></strong></p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_external_links">External Links</h2>
-<div class="sectionbody">
-<div class="ulist"><ul>
+<div class="olist arabic"><ol class="arabic">
 <li>
 <p>
-<a href="https://github.com/nitral/world-negative-one">World Negative One - Github Repository</a>
+<a href="https://groups.google.com/forum/#!topic/worldnegativeone/sOfaMAHD-OI">"Start of Documentation!"</a>. World Negative One Mailing List. 15-Jun-2014.
 </p>
 </li>
 <li>
 <p>
-<a href="https://groups.google.com/forum/#!forum/worldnegativeone">World Negative One - Mailing List</a>
+<a href="https://developer.gnome.org/gdp-style-guide/stable/fundamentals-1.html.en">General Style Requirements</a>. GNOME-STYLE. GNOME Developer Documentation.
 </p>
 </li>
-</ul></div>
+<li>
+<p>
+<a href="https://help.ubuntu.com/community/WikiGuide/PageCreation">/PageCreation</a>. WikiGuide. Ubuntu Documentation.
+</p>
+</li>
+<li>
+<p>
+<a href="https://help.ubuntu.com/community/DocumentationTemplate">DocumentationTemplate</a>. WikiGuide. Ubuntu Documentation.
+</p>
+</li>
+<li>
+<p>
+<a href="https://groups.google.com/forum/#!topic/worldnegativeone/Eq55nPFxskY">"Documentation Welcome Page"</a>. World Negative One Mailing List. 29-Jan-2014.
+</p>
+</li>
+<li>
+<p>
+<a href="https://groups.google.com/forum/#!topic/worldnegativeone/jQrzClndZzc">"Documentation Initiated!"</a>. World Negative One Mailing List. 27-Jan-2014.
+</p>
+</li>
+<li>
+<p>
+<a href="https://groups.google.com/forum/#!topic/worldnegativeone/cSbL78RZDrU">"Documentation Tool Development"</a>. World Negative One Mailing List. 25-Jan-2014.
+</p>
+</li>
+<li>
+<p>
+<a href="https://groups.google.com/forum/#!topic/worldnegativeone/8M3keD9qDrg">"VOTE - Documentation Tool"</a>. World Negative One Mailing List. 23-Jan-2014.
+</p>
+</li>
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/AsciiDoc">AsciiDoc</a>. Wikipedia.org.
+</p>
+</li>
+</ol></div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-07-22 14:58:59 IST
+Last updated 2014-07-22 15:25:01 IST
 </div>
 </div>
 </body>
