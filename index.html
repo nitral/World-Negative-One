@@ -1,0 +1,394 @@
+<!-- Documentation Home Page -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>World Negative One Documentation - Home</title>
+
+		<!-- Embedded CSS Properties -->
+		<style>
+			a
+			{
+				text-decoration: none;
+			}
+
+			a:hover
+			{
+				text-decoration: underline;
+			}
+
+			div#top-notification-bar
+			{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				border-bottom: 1px solid rgb(102, 102, 102);
+				display: none;
+				background-color: #FFF0B4;
+			}
+			
+			section#top-notification-bar-message
+			{
+				float: left;
+				padding: 7px;
+				margin-left: 5px;
+			}
+			
+			section#top-notification-bar-close
+			{
+				float: right;
+				margin-right: 5px;
+				padding: 7px;
+				color: #CC0000;
+			}
+
+			section#header-logo
+			{
+				float: left;
+				margin-left: 5px;
+			}
+
+			section#header-links
+			{
+				float: left;
+				padding-right: 25px;
+				border-right: 1px solid black;
+				margin-left: 10px;
+				line-height: parent;
+			}
+
+			section.header-links
+			{
+				margin-left: 15px;
+				float: left;
+			}
+
+			a.header-links
+			{
+				color: #000000;
+				padding: 10px;
+			}
+
+			div#header-links-info
+			{
+				float:right;
+				color: rgb(90, 90, 90);
+			}
+
+			section#link-description-1
+			{
+				display: none;
+			}
+
+			section#link-description-2
+			{
+				display: none;
+			}
+
+			section#link-description-3
+			{
+				display: none;
+			}
+
+			section#link-description-4
+			{
+				display: none;
+			}
+
+			section#link-description-5
+			{
+				display: none;
+			}
+
+			div#main-content-body
+			{
+				margin-bottom: 45px;
+				font-family: Times New Roman;
+			}
+
+			div#home-content
+			{
+				margin-top: 15px;
+			}
+
+			section#home-content-logo
+			{
+				margin-top: 12%;
+			}
+
+			section.home-content-links
+			{
+				padding: 5px;
+				display: inline-block;
+			}
+			
+			section#home-content-link-3
+			{
+				margin-left: 120px;
+			}
+			
+			section.home-content-links a
+			{
+				color: #000000;
+			}
+
+			div#about-content
+			{
+				margin-top: 15px;
+				margin-left: 17%;
+				margin-right: 17%;
+				display: none;
+			}
+
+			div#about-author
+			{
+				width: 100%;
+				text-align: right;
+				font-weight: bold;
+			}
+
+			div#credits-content
+			{
+				margin-top: 15px;
+				display: none;
+			}
+
+			table.credits-list-entity
+			{
+				margin-left: 12.5%;
+				margin-bottom: 5px;
+			}
+
+			th.field-name:after
+			{
+				content: ":";
+			}
+
+			footer
+			{
+				position: fixed;
+				bottom: 0px;
+				left: 0px;
+				border-top: 1px solid rgb(228, 228, 228);
+				color: rgb(102, 102, 102);
+				background: rgb(242, 242, 242);
+				width: 100%;
+				display: inline;
+				align: center;
+			}
+
+			section.footer-links
+			{
+				margin-left: 75px;
+				padding: 10px;
+				display: inline-block;
+			}
+
+			a.footer-links
+			{
+				padding: 10px;
+			}
+			
+			section.footer-links a
+			{
+				color: rgb(102, 102, 102);
+			}
+
+			section#footer-link-1
+			{
+				margin-left: 0px;
+			}
+
+			div.clear-div
+			{
+				clear: both;
+			}
+		</style>
+
+		<!-- JavaScript Functions -->
+		<script>
+			var currentActiveContent, currentActiveHeaderLinkDescription, defaultHeaderLinkDescription;
+			
+			function initializeAll() {
+				currentActiveContent = document.getElementById("home-content");
+				currentActiveHeaderLinkDescription = document.getElementById("link-description-0");
+				defaultHeaderLinkDescription = document.getElementById("link-description-0");
+			}
+			
+			function changeActiveHeaderLinkDescription(newActiveHeaderLinkDescriptionID) {
+				var newActiveHeaderLinkDescription = document.getElementById("link-description-" + newActiveHeaderLinkDescriptionID);
+				currentActiveHeaderLinkDescription.style.display = "none";
+				newActiveHeaderLinkDescription.style.display = "block";
+				currentActiveHeaderLinkDescription = newActiveHeaderLinkDescription;
+			}
+			
+			function resetActiveHeaderLinkDescription() {
+				currentActiveHeaderLinkDescription.style.display = "none";
+				currentActiveHeaderLinkDescription = defaultHeaderLinkDescription;
+				currentActiveHeaderLinkDescription.style.display = "block";
+			}
+			
+			function changeActiveContent(newActiveContentID) {
+				var newActiveContent = document.getElementById(newActiveContentID + "-content");
+				currentActiveContent.style.display = "none";
+				newActiveContent.style.display = "block";
+				currentActiveContent = newActiveContent;
+			}
+			
+			function closeNotification() {
+				document.getElementById("top-notification-bar").style.display = "none";
+			}
+
+		</script>
+
+	</head>
+
+	<body onLoad = "initializeAll()">
+
+		<!-- Hidden Notification Div for popping notifications -->
+		<div class = "notification-bar" id = "top-notification-bar">
+			<!-- Error Message/Notification Message -->
+			<section id = "top-notification-bar-message">
+				<strong>Message / Notification</strong>
+			</section>
+			<!-- Notification Bar Close Button -->
+			<section id = "top-notification-bar-close"><button onClick = "closeNotification()">X</button></section>
+		</div>
+
+		<!-- Header Div for External Links and their Information/Description -->
+		<header>
+			<section id = "header-logo">
+				<img src = "./images/header-logo.png" id = "header-logo">
+			</section>
+			<!-- External Third Party Links -->
+			<section id = "header-links">
+				<section class = "header-links"><a href = "http://http://www.ptokax.org/" id = "header-link-1" class = "header-links" onMouseOver = "changeActiveHeaderLinkDescription(1)" onMouseOut = "resetActiveHeaderLinkDescription()">PtokaX</a></section>
+				<section class = "header-links"><a href = "http://www.lua.org/" id = "header-link-5" class = "header-links" onMouseOver = "changeActiveHeaderLinkDescription(2)" onMouseOut = "resetActiveHeaderLinkDescription()">Lua</a></section>
+				<section class = "header-links"><a href = "http://git-scm.com/" id = "header-link-2" class = "header-links" onMouseOver = "changeActiveHeaderLinkDescription(3)" onMouseOut = "resetActiveHeaderLinkDescription()">Git</a></section>
+				<section class = "header-links"><a href = "https://www.java.com/en/" id = "header-link-3" class = "header-links" onMouseOver = "changeActiveHeaderLinkDescription(4)" onMouseOut = "resetActiveHeaderLinkDescription()">Java</a></section>
+				<section class = "header-links"><a href = "http://www.bitvise.com/" id = "header-link-4" class = "header-links" onMouseOver = "changeActiveHeaderLinkDescription(5)" onMouseOut = "resetActiveHeaderLinkDescription()">Bitvise SSH Server</a></section>
+			</section>
+			<!-- Header Third-Party Links Description/Information -->
+			<div id = "header-links-info">
+				<section id = "link-description-0">
+					World Negative One - Gaming and Art | Open Source Direct Connect Hub Suite
+				</section>
+				<section id = "link-description-1">
+					Multi-platform server for Neo-Modus Direct Connect Peer-To-Peer sharing network
+				</section>
+				<section id = "link-description-2">
+					A powerful, fast, lightweight, embeddable scripting language
+				</section>
+				<section id = "link-description-3">
+					Free and open source distributed version control system
+				</section>
+				<section id = "link-description-4">
+					An object-oriented programming language and computing platform
+				</section>
+				<section id = "link-description-5">
+					SSH Server designed for all Windows NT-series operating systems
+				</section>
+			</div>
+		</header>
+
+		<!-- Clear Division -->
+		<div class = "clear-div"></div>
+
+		<!-- Main Content Body Division -->
+		<div class = "content-holder" id = "main-content-body">
+			<!-- Home Page Content Division -->
+			<div class = "content" id = "home-content">
+				<center>
+					<section id = "home-content-logo"><img src = "./images/logo.png" title = "World Negative One" alt = "World Negative One"></section>
+					<br />
+					<br />
+					<section>
+						<section class = "home-content-links"><a href = "./doc-index.html" id = "home-content-link-1"><img src = "./images/doc-index.png" title = "Documentation Index"><br />Documentation Index</a></section>
+					</section>
+					<section>
+						<section class = "home-content-links"><a href = "https://github.com/nitral/world-negative-one" id = "home-content-link-2"><img src = "./images/github.png" title = "Github Repository"><br />Github Repository</a></section>
+						<section class = "home-content-links" id = "home-content-link-3"><a href = "https://groups.google.com/forum/#!forum/worldnegativeone" id = "home-content-link-3"><img src = "./images/google-groups.png" title = "Google Group"><br />Google Group</a></section>
+					</section>
+				</center>
+			</div>
+			<!-- About Page Content Division -->
+			<div class = "content" id = "about-content">
+				<center>
+					<h1>About</h1>
+					<p><b>World Negative One</b> is a user-friendly Direct Connect Hub Suite built on the PtokaX 0.5 platform. The suite builds around the file-sharing capability given by the serving platform to make the overall experience more fun and easy for the user. The suite has a plethora of features for both the host and the user like Automated backup, LAN game server scanners, Television series information retrieval, SSH logging and many more!</p>
+					<p>The hub suite project was started for local use in <b>BITS-Pilani, Pilani Campus</b> by its original developers in <b>September, 2013</b>. It was developed originally with the theme: <b><i>Gaming and Art</i></b>. Evidently, its primary target audience were LAN gamers and people with an artistic outlook. Since then, it has grown exponentially in terms of features and outreach. The suite was made open-source in <b>January, 2014</b> with a Git repository hosted on Github. The hub is still in its infant stages of development with a lot of scope to improve and dream.</p>
+					<p>The suite is built on top of the <b>PtokaX 0.5 Direct Connect Hub</b> with hub scripts written in <b>Lua 5 API 2</b>. The suite uses <b><i>Lua, Shell, Powershell and Java</i></b> for implementing various modules. The suite is designed to be as cross-platform as possible. Lua is primarily used as the scripting language for the Ptokax interface. The directory structure helps define overall organization of modules and facilitates information flow between them. Extensive documentation of each module is in the <b>Documentation</b> directory of the main source tree.</p>
+					<p><b>PtokaX DC Hub</b> is a multi - platform server application for Neo - Modus Direct Connect (NMDC) Peer-to-Peer sharing network. Started in May 2002 by Ptaczek, PtokaX has evolved into a mature, feature rich, stable and widely used server application. As the first of it's breed PtokaX utilizes ultra-fast crossplatform LUA scripting engine, designed by Tecgraf, the Computer Graphics Technology Group of PUC-Rio (the Pontifical Catholic University of Rio de Janeiro in Brazil).</p>
+				</center>
+				<div id="about-author">- Nilay Binjola</div>
+			</div>
+			<!-- Credits/Mailing List Content Division -->
+			<div class = "content" id = "credits-content">
+				<center>
+					<h1>Credits</h1>
+					<h4>This is at least a partial credits-file of people that have contributed to the World Negative One Project. It is sorted by name and formatted.</h4>
+					<h5>The fields are: name (N), email (E), description (D), and snail-mail address (S)</h5>
+				</center>
+				<table id="credits-list" class="credits-list-entity">
+					<tr><th class="field-name">N</th><td class="field-value">Aman Gupta</td></tr>
+					<tr><th class="field-name">E</th><td class="field-value">aman.devilz@gmail.com</td></tr>
+					<tr><th class="field-name">D</th><td class="field-value">Former hub hacker</td></tr>
+				</table>
+				<table id="credits-list" class="credits-list-entity">
+					<tr><th class="field-name">N</th><td class="field-value">Amitabh Aggarwal</td></tr>
+					<tr><th class="field-name">E</th><td class="field-value">aggarwal.amitabh@gmail.com</td></tr>
+					<tr><th class="field-name">D</th><td class="field-value">Former web hacker</td></tr>
+				</table>
+				<table id="credits-list" class="credits-list-entity">
+					<tr><th class="field-name">N</th><td class="field-value">Amitayush Thakur</td></tr>
+					<tr><th class="field-name">E</th><td class="field-value">amit9oct@gmail.com</td></tr>
+					<tr><th class="field-name">D</th><td class="field-value">Hub hacker</td></tr>
+					<tr><th class="field-name">S</th><td class="field-value">BITS-Pilani, Pilani Campus</td></tr>
+				</table>
+				<table id="credits-list" class="credits-list-entity">
+					<tr><th class="field-name">N</th><td class="field-value">Bhanush Mehta</td></tr>
+					<tr><th class="field-name">E</th><td class="field-value">bhanushmehta@gmail.com</td></tr>
+					<tr><th class="field-name">D</th><td class="field-value">Former maintainer</td></tr>
+				</table>
+				<table id="credits-list" class="credits-list-entity">
+					<tr><th class="field-name">N</th><td class="field-value">Gokul Krishnan</td></tr>
+					<tr><th class="field-name">E</th><td class="field-value">gokul.uf@gmail.com</td></tr>
+					<tr><th class="field-name">D</th><td class="field-value">Hub maintainer</td></tr>
+					<tr><th class="field-name">S</th><td class="field-value">BITS-Pilani, Pilani Campus</td></tr>
+				</table>
+				<table id="credits-list" class="credits-list-entity">
+					<tr><th class="field-name">N</th><td class="field-value">Nikhil Motiani</td></tr>
+					<tr><th class="field-name">E</th><td class="field-value">niksdevilz@gmail.com</td></tr>
+					<tr><th class="field-name">D</th><td class="field-value">System administrator</td></tr>
+					<tr><th class="field-name">S</th><td class="field-value">BITS-Pilani, Pilani Campus</td></tr>
+				</table>
+				<table id="credits-list" class="credits-list-entity">
+					<tr><th class="field-name">N</th><td class="field-value">Nilay Binjola</td></tr>
+					<tr><th class="field-name">E</th><td class="field-value">nilaybinjola@gmail.com</td></tr>
+					<tr><th class="field-name">D</th><td class="field-value">Original hub hacker, maintainer</td></tr>
+					<tr><th class="field-name">S</th><td class="field-value">BITS-Pilani, Pilani Campus</td></tr>
+				</table>
+				<table id="credits-list" class="credits-list-entity">
+					<tr><th class="field-name">N</th><td class="field-value">Prem Gandhi</td></tr>
+					<tr><th class="field-name">E</th><td class="field-value">premsgz@gmail.com</td></tr>
+					<tr><th class="field-name">D</th><td class="field-value">Original hub maintainer, hacker</td></tr>
+				</table>
+				<table id="credits-list" class="credits-list-entity">
+					<tr><th class="field-name">N</th><td class="field-value">Tejas Bugdani</td></tr>
+					<tr><th class="field-name">E</th><td class="field-value">94tejas@gmail.com</td></tr>
+					<tr><th class="field-name">D</th><td class="field-value">Former maintainer</td></tr>
+				</table>
+			</div>
+		</div>
+
+		<!-- Footer Division for internal page navigation links -->
+		<footer id = "footer">
+			<center>
+				<section class = "footer-links" id = "footer-link-1"><a href = "javascript: changeActiveContent('home')" id = "footer-link-1" class = "footer-links">Home</a></section>
+				<section class = "footer-links"><a href = "javascript: changeActiveContent('about')" id = "footer-link-2" class = "footer-links">About</a></section>
+				<section class = "footer-links"><a href = "javascript: changeActiveContent('credits')" id = "footer-link-3" class = "footer-links">Credits</a></section>
+			</center>
+		</footer>
+	</body>
+</html>
