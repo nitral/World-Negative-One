@@ -17,9 +17,9 @@ public class SourceEngineQueryDemo {
 
 	private static final int PORT = 27015;
 
-	private static String CS_FILE_PATH = "..\\..\\tmp\\cs_server_list.txt";
-	private static String CSGO_FILE_PATH = "..\\..\\tmp\\csgo_server_list.txt";
-	private static String DOTA_FILE_PATH = "..\\..\\tmp\\dota_server_list.txt";
+	private static String CS_FILE_PATH = "../../tmp/cs_server_list.txt";
+	private static String CSGO_FILE_PATH = "../../tmp/csgo_server_list.txt";
+	private static String DOTA_FILE_PATH = "../../tmp/dota_server_list.txt";
 
 	private static DatagramSocket[] sockets = new DatagramSocket[255 * ROOT_IP_ADDRESSES.length];
 
