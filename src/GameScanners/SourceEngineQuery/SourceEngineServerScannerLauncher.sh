@@ -5,27 +5,27 @@ clear
 echo "Source Engine Server Scanner Script started at - $(date)"
 echo "------------------------------------------------------------------------------"
 
-# If OS is Unix-based, Start a New Shell with Increased Limit on Open File Handles
-if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ];
-then
-	echo "Linux OS Detected. Starting new shell with Open Files Handles Limit 11224."
-	if sudo sh -c "ulimit -n 11224 && exec su $LOGNAME"
-	then
-		echo "New Shell started!"
-	else
-		echo "New Shell could not be started!"
-	fi
-fi
-
 while :
 do
 	echo "Source Engine Server Scanner Pass started at - $(date +'%T')"
 	
-	if java SourceEngineQueryDemo
+	# If Kernel is Linux, Use ulimit to Increase Allowed Open File Handles Limit to 11224.
+	if [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]
 	then
-	echo "Source Engine Servers Scanned at - $(date +'%T')"
+		echo "Linux Kernel: Setting Open Files Limit at 11224"
+		if sudo sh -c "ulimit -n 11224 && exec java SourceEngineQueryDemo"
+		then
+			echo "Source Engine Servers Scanned at - $(date +'%T')"
+		else
+			echo "Source Engine Servers Scanner Failed!"
+		fi
 	else
-	echo "Source Engine Servers Scanner Failed!"
+		if java SourceEngineQueryDemo
+		then
+			echo "Source Engine Servers Scanned at - $(date +'%T')"
+		else
+			echo "Source Engine Servers Scanner Failed!"
+		fi
 	fi
 	
 	echo ""

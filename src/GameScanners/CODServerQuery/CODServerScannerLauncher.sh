@@ -5,29 +5,31 @@ clear
 echo "Call of Duty 4 Servers Scanner Script started at - $(date)"
 echo "------------------------------------------------------------------------------"
 
-# If OS is Unix-based, Start a New Shell with Increased Limit on Open File Handles
-if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ];
-then
-	echo "Linux OS Detected. Starting new shell with Open Files Handles Limit 11224."
-	if sudo sh -c "ulimit -n 11224 && exec su $LOGNAME"
-	then
-		echo "New Shell started!"
-	else
-		echo "New Shell could not be started!"
-	fi
-fi
-
 while :
 do
 	echo "Call of Duty 4 Servers Scanner Pass started at - $(date +'%T')"
 	
-	if java CODServerQueryDemo > ../../tmp/cod_server_list.txt
+	# If Kernel is Linux, Use ulimit to Increase Allowed Open File Handles Limit to 11224.
+	if [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]
 	then
-	echo "Call of Duty 4 Servers Scanned at - $(date +'%T')"
-	echo "IP Addresses of Live Servers dumped."
+		echo "Linux Kernel: Setting Open Files Limit at 11224"
+		if sudo sh -c "ulimit -n 11224 && exec java CODServerQueryDemo > ../../tmp/cod_server_list.txt"
+		then
+			echo "Call of Duty 4 Servers Scanned at - $(date +'%T')"
+			echo "IP Addresses of Live Servers dumped."
+		else
+			echo "Call of Duty 4 Servers Scanner Failed at - $(date +'%T')"
+			echo "IP Addresses of Live Servers Could Not Be Dumped."
+		fi
 	else
-	echo "Call of Duty 4 Servers Scanner Failed at - $(date +'%T')"
-	echo "IP Addresses of Live Servers Could Not Be Dumped."
+		if java CODServerQueryDemo > ../../tmp/cod_server_list.txt
+		then
+			echo "Call of Duty 4 Servers Scanned at - $(date +'%T')"
+			echo "IP Addresses of Live Servers dumped."
+		else
+			echo "Call of Duty 4 Servers Scanner Failed at - $(date +'%T')"
+			echo "IP Addresses of Live Servers Could Not Be Dumped."
+		fi
 	fi
 	
 	echo ""
