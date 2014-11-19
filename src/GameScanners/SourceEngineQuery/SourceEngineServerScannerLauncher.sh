@@ -5,6 +5,18 @@ clear
 echo "Source Engine Server Scanner Script started at - $(date)"
 echo "------------------------------------------------------------------------------"
 
+# If OS is Unix-based, Start a New Shell with Increased Limit on Open File Handles
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ];
+then
+	echo "Linux OS Detected. Starting new shell with Open Files Handles Limit 11224."
+	if sudo sh -c "ulimit -n 11224 && exec su $LOGNAME"
+	then
+		echo "New Shell started!"
+	else
+		echo "New Shell could not be started!"
+	fi
+fi
+
 while :
 do
 	echo "Source Engine Server Scanner Pass started at - $(date +'%T')"
